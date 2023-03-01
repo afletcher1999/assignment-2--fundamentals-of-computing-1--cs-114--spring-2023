@@ -32,46 +32,34 @@ public class Diamond {
           // Inserts the necessary number of spaces at the beginning of the current row
           for (int col = 0; col < spaces; col++) {
             System.out.print("  ");
-           /*  if( col == middleRow) {
-              System.out.print("  ");
+          }
+            if(row == 1) {
+              // Prints out the first rows single asterisk
+              System.out.print("*");
+              System.out.println();
             }
-            else if(row == 1){
-              System.out.print("  ");
-            }
-            else if(row == maxRows){
-              System.out.print("  ");
+            else if(row == size + 1) {
+              // Prints out the last rows single asterisk
+              System.out.print("*");
+              System.out.println();
             }
             else{
-              System.out.print( "  "); */
-            //}
-          }
-              if(row == 1) {
-                // Prints out the first rows single asterisk
-                System.out.print("*");
-                System.out.println();
-              }
-              else if(row == size + 1) {
-                // Prints out the last rows single asterisk
-                System.out.print("*");
-                System.out.println();
-              }
-              else{
-                  // Calculate the number of asterisks needed in the current row
-                  int asterisks = size - spaces * 2;
+              // Calculate the number of asterisks needed in the current row
+              int asterisks = size - spaces * 2;
 
-                  // Print the necessary number of asterisks in the current row
-                  for (int col = 0; col < asterisks * 2; col++) {
-                    if(col % 2 == 0 || col == 0) {
-                      System.out.print(" *");
-                    }
-                  }
-                  // Move to the next line to start the next row
-                  System.out.println();
+              // Print the necessary number of asterisks in the current row
+              for (int col = 0; col < asterisks * 2; col++) {
+                if(col % 2 == 0 || col == 0) {
+                  System.out.print(" *");
+                }
               }
-        }
-      }
+              // Move to the next line to start the next row
+              System.out.println();
+            }
+         }
+       }
 
-      // Loop through each row of the diamond
+        // Loop through each row of the diamond
         if(size % 2 != 0){
           for (int row = 0; row < maxRows; row++) {
             // Calculate the number of spaces needed before the first asterisk in the current row
